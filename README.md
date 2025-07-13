@@ -43,9 +43,6 @@ flowchart TD
 
 ## Screenshots
 
-### App Logo
-<img src="public/logo192.png" alt="App Logo" width="96" />
-<img src="public/logo512.png" alt="App Logo Large" width="128" />
 
 ### UI Preview
 <!-- Add your own screenshots here, e.g.:
