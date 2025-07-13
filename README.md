@@ -43,6 +43,10 @@ flowchart TD
 
 ## Screenshots
 
+### App Preview
+
+![App Preview 1](/public/screenshots/ss1.png)
+![App Preview 2](/public/screenshots/ss2.png)
 
 ### UI Preview
 <!-- Add your own screenshots here, e.g.:
