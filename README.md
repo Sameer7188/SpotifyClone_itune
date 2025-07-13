@@ -1,6 +1,8 @@
 # Spotify Clone (iTunes Edition)
 
-A modern, responsive Spotify-inspired music player built with React and Tailwind CSS, featuring real music previews using the iTunes Search API.
+A modern, responsive Spotify-inspired music player built with React and Tailwind CSS, featuring real Bollywood music previews using the iTunes Search API.
+
+---
 
 ## Features
 - 🎵 **Real Bollywood music previews** (30s) via iTunes API
@@ -10,6 +12,48 @@ A modern, responsive Spotify-inspired music player built with React and Tailwind
 - ⏯️ Floating, premium-style BottomBar music player
 - 🔍 Search, Home, and Collection navigation
 - 🌙 Dark mode look by default
+- ⚡ Fast, single-page app experience
+
+---
+
+## Architecture
+
+```mermaid
+flowchart TD
+    A[User] -->|Browses| B[Sidebar]
+    A -->|Plays Song| C[Music Card Grid]
+    C -->|Updates| D[BottomBar Player]
+    D -->|Shows| E[Current Track Info]
+    C -->|Updates| F[Recently Played in Sidebar]
+    B -->|Shows| F
+    A -->|Navigates| G[Navbar]
+    G -->|Switches| C
+    C -->|Fetches| H[iTunes API]
+    H -->|Returns| C
+    style B fill:#1db954,stroke:#191414,stroke-width:2px
+    style C fill:#232323,stroke:#191414,stroke-width:2px
+    style D fill:#282828,stroke:#191414,stroke-width:2px
+    style F fill:#232323,stroke:#191414,stroke-width:2px
+    style G fill:#191414,stroke:#1db954,stroke-width:2px
+    style H fill:#fff,stroke:#1db954,stroke-width:2px
+    style E fill:#fff,stroke:#282828,stroke-width:2px
+```
+
+---
+
+## Screenshots
+
+### App Logo
+<img src="public/logo192.png" alt="App Logo" width="96" />
+<img src="public/logo512.png" alt="App Logo Large" width="128" />
+
+### UI Preview
+<!-- Add your own screenshots here, e.g.:
+<img src="screenshots/home.png" alt="Home UI" width="400" />
+<img src="screenshots/sidebar.png" alt="Sidebar UI" width="200" />
+-->
+
+---
 
 ## Getting Started
 
@@ -31,11 +75,12 @@ npm start
 
 The app will run at [http://localhost:3000](http://localhost:3000)
 
+---
+
 ## Deployment
 You can deploy this app to Vercel, Netlify, or any static hosting that supports React apps.
 
-## Screenshots
-![App Screenshot](public/logo192.png)
+---
 
 ## Credits
 - UI inspired by Spotify
